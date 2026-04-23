@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Fira Code", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: #0D0D0D;
+  color: #f0d8d8;
+  font-family: var(--font-mono);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #3a1515;
+  color: #f0d8d8;
+}
+
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.terminal-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.terminal-scrollbar::-webkit-scrollbar-thumb {
+  background: #2a1515;
+  border-radius: 4px;
+}
+.terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #3a2020;
+}
+
+.asci-art {
+   line-height: 1.1;
+   white-space: pre;
+}
+
+@keyframes smooth-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-smooth-blink {
+  animation: smooth-blink 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
